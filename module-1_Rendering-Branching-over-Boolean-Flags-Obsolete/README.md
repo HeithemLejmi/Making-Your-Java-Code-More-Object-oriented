@@ -102,14 +102,14 @@ private void ensureUnFrozen(){
   this.onUnFrozen.handle();
 }
 ```
-##### 3. The methods handeling the aspects of each state (the state isFrozen for example) will be extracted from the class
- **Account**, and we will create an interface that mentions the signature of these methods for handeling this state. 
+##### 3. The methods handeling the aspects of each state (the state isFrozen for example) will be extracted from the class **Account**, and we will create an interface that mentions the signature of these methods for handeling this state. 
+
 And the implementation of this interface (and its methods) should only know **how something happens** (how the Frozen state changes in every case: deposit(), withdraw(), freezeAccount()) and we will leave it to the caller (in this case the **Account** class) to decide **when it happens** (when he calls these methods).
 
 This will reduce the complexity in the **Account** class and it will transfer the **responsability** of handeling the **Frozen** state in an appropriate interface (and its implementation will details the actions driven by these methods).
 
 
-##### 4. Apply the **State Design Pattern**, to control brabching complexity:
+##### 4. Apply the **State Design Pattern**, to control branching complexity:
 
 - Before implementing the State Pattern: 
 
