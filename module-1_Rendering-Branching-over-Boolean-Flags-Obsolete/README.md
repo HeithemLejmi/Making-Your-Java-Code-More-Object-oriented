@@ -142,14 +142,13 @@ This design is **more object-oriented** if for no other reason than because we *
 - The **Consumer Interface** is a part of the **java.util.function** package which has been introduced since Java 8, to
  implement **functional programming** in Java.
  
-- **Consumer** represents **a function which takes in one argument and produces a result.** However these kind of functions don’t
- return any value. In the example below, the **Consumer** represents the function **addToBalance** that takes one argument
+- **Consumer** represents **a function which takes in one argument and produces a result.** However these kind of functions don’t return any value. In the example below, the **Consumer** represents the function **addToBalance** that takes one argument
   **BigDecimal** (which is the argument of the represented function: **addToBalance**) and it returns no value (we
    only call it like this: **addToBalance.accept(amount)**)
 
 - The Consumer interface has the following function **.accept()**:
 
-    - accept(): This method accepts **one parameter** and performs the operation on the given argumentdoes not return any value (in this example: it
+    - accept(): This method accepts **one parameter** and performs the operation on the given argument, and it does not return any value (in this example: it
     accepts one argument : **amount** of type **BigDecimal**, and it performs the operation **addToBalance** on this argument
     **amount**)
     
